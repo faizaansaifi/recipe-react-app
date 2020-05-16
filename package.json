@@ -21,12 +21,9 @@
     "scss": "^0.2.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
+    "react": "react-scripts start",
     "server": "node-env-run server --exec nodemon | pino-colada",
-    "dev": "run-p server start"
+    "start": "run-p server react"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
