@@ -1,0 +1,29 @@
+.item-details {
+  padding: 100px 150px 30px 150px;
+  h2 {
+    font-size: 25px;
+    font-weight: 800;
+  }
+  .image-container {
+    max-width: 400px;
+    max-height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .mis-info {
+    display: flex;
+    justify-content: space-around;
+    font-size: 18px;
+  }
+  .mongo {
+    text-align: left;
+    word-spacing: 2px;
+    line-height: 24px;
+    li {
+      margin: 10px 0;
+    }
+  }
+}

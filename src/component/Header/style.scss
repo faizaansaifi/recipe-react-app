@@ -1,0 +1,25 @@
+.header{
+  position: fixed;
+  width: 100%;
+  background: white;
+  padding: 25px 0;
+  z-index: 1;
+  .link-container {
+    display: flex;
+    justify-content: space-between;
+    .logo{
+      font-size: 30px;
+      font-family: cursive;
+    }
+    .navigations {
+      padding: 10px 0;
+      a{
+        padding: 20px;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          color: #8B98A7;
+        }
+      }
+    }
+  }
+}

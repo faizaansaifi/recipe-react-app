@@ -1,0 +1,33 @@
+.container{
+  width: 90%;
+  margin: 0 auto;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+
+img{
+  width: 100%;
+}
+strong {
+  font-weight: bold;
+}
+h2, p, h3, a {
+  font-family: sans-serif;
+}
+
+h2{
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0;
+  font-family: sans-serif;
+  &:after {
+    content: '';
+    display: block;
+    border: 2px solid;
+    width: 100px;
+    color: #ff930a;
+    margin: 15px auto;
+  }
+}

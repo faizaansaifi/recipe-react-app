@@ -1,0 +1,13 @@
+footer{
+  padding: 25px;
+  font-size: 18px;
+  color: #8a8989;
+  &:before {
+    content: '';
+    display: block;
+    border: 2px solid;
+    width: 100px;
+    color: #ff930a;
+    margin: 15px auto;
+  }
+}
