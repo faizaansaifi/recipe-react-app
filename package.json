@@ -28,11 +28,8 @@
     "pino-colada": "^1.6.1"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "server": "node-env-run server --exec nodemon | pino-colada",
-    "start": "run-p dev server"
+    "start": "react-scripts start"
   },
-
   "eslintConfig": {
     "extends": "react-app"
   },
