@@ -30,7 +30,7 @@
   "scripts": {
     "dev": "react-scripts start",
     "server": "node-env-run server --exec nodemon | pino-colada",
-    "start": "run-p server dev"
+    "start": "run-p dev server"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
