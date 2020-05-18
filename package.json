@@ -19,12 +19,18 @@
     "redux": "^4.0.5",
     "redux-logger": "^3.0.6",
     "sass-loader": "^8.0.2",
-    "scss": "^0.2.4"
+    "scss": "^0.2.4",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-pino-logger": "^5.0.0",
+    "node-env-run": "^3.0.2",
+    "nodemon": "^2.0.3",
+    "pino-colada": "^1.6.1"
   },
   "scripts": {
     "dev": "react-scripts start",
     "server": "node-env-run server --exec nodemon | pino-colada",
-    "start": "run-p server start"
+    "start": "run-p server dev"
   },
   "proxy": "http://localhost:5000",
   "eslintConfig": {
@@ -43,11 +49,6 @@
     ]
   },
   "devDependencies": {
-    "body-parser": "^1.19.0",
-    "express": "^4.17.1",
-    "express-pino-logger": "^5.0.0",
-    "node-env-run": "^3.0.2",
-    "nodemon": "^2.0.3",
-    "pino-colada": "^1.6.1"
+
   }
 }

@@ -1,7 +1,6 @@
 const mongoose = require('mongoose')
 
-const mn = new mongoose('mongodb+srv://recipe:Saifi@123@cluster0-buzwz.mongodb.net/recipes?retryWrites=true&w=majority')
-const Recipes = mn.model('recipe', {
+const Recipes = mongoose.model('recipe', {
             name: {
                 type: String
             },
