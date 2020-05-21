@@ -19,16 +19,14 @@ class Search extends Component{
     onSearch = (e) => {
         const search = this.state.value && this.state.value.split(' ');
         const { query } = this.props;
-        fetch('https://dummy-api-saifi.herokuapp.com/',{
-            method: 'GET',
+        fetch('https://recipe-server-saifi.herokuapp.com/search',{
+            method: 'POST',
+            mode: 'no-cors',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET,POST,PUT,PATCH,DELETE,OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type'
+                'Content-Type': 'application/json'
             },
-            // body: JSON.stringify({search})
+            body: JSON.stringify({search})
         }).then(res => res.json()).then(data => query(data))
         this.props.history.push('/result');
     }
