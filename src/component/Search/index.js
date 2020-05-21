@@ -19,7 +19,7 @@ class Search extends Component{
     onSearch = (e) => {
         const search = this.state.value && this.state.value.split(' ');
         const { query } = this.props;
-        fetch('https://recipe-server-saifi.herokuapp.com/search',{
+        fetch('https://dummy-api-saifi.herokuapp.com/',{
             method: 'POST',
             headers: {
                 'Accept': 'application/json',
