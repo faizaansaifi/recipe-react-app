@@ -20,12 +20,12 @@ class Search extends Component{
         const search = this.state.value && this.state.value.split(' ');
         const { query } = this.props;
         fetch('https://dummy-api-saifi.herokuapp.com/',{
-            method: 'POST',
+            method: 'GET',
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({search})
+            // body: JSON.stringify({search})
         }).then(res => res.json()).then(data => query(data))
         this.props.history.push('/result');
     }
