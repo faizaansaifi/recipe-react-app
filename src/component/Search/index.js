@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './style.scss';
-import { query } from "../../action";
+import { query, showLoader, hideLoader } from "../../action";
 import {bindActionCreators} from "redux";
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
@@ -19,20 +19,26 @@ class Search extends Component{
     onSearch = (e) => {
         const search = this.state.value && this.state.value.split(' ');
         const { query } = this.props;
+
         fetch('https://recipe-server-saifi.herokuapp.com/search',{
             method: 'POST',
-            mode: 'no-cors',
             headers: {
+                'Access-Control-Allow-Headers': 'Content-Type',
+                'Access-Control-Allow-Methods': 'GET,POST,PUT,PATCH,DELETE,OPTIONS',
+                'Access-Control-Allow-Origin': '*',
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             body: JSON.stringify({search})
-        }).then(res => res.json()).then(data => query(data))
-        this.props.history.push('/result');
+        }).then(res => res.json()).then(data => {
+            this.props.history.push('/result');
+            query(data)
+        }).catch(e => console.log('Error: ',e))
     }
     onEnter = (e) => {
         e.keyCode === 13 && this.onSearch();
     }
+
     render() {
         return (
             <div className='search'>
@@ -55,7 +61,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        ...bindActionCreators({query}, dispatch)
+        ...bindActionCreators({query, showLoader, hideLoader}, dispatch)
     }
 }
 

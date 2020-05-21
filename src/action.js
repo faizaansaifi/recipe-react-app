@@ -13,6 +13,14 @@ export const query = (data) => {
         data,
     }
 }
+export const showLoader = () => {
+    return {type: 'SHOW_LOADER'}
+}
+
+
+export const hideLoader = () => {
+    return {type: 'HIDE_LOADER'}
+}
 
 let obj = {
     name: 'French Toast with Honey',

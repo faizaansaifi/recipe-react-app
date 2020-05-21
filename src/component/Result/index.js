@@ -31,7 +31,6 @@ class Result extends Component {
                         {items}
                     </ul> : <p>No Data Found</p>}
                 </div>
-
             </div>
         );
     }
