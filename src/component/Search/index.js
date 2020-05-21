@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import './style.scss';
-import { query, showLoader, hideLoader } from "../../action";
+import { query } from "../../action";
 import {bindActionCreators} from "redux";
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom'
@@ -19,7 +19,6 @@ class Search extends Component{
     onSearch = (e) => {
         const search = this.state.value && this.state.value.split(' ');
         const { query } = this.props;
-
         fetch('https://recipe-server-saifi.herokuapp.com/search',{
             method: 'POST',
             headers: {
@@ -46,9 +45,6 @@ class Search extends Component{
                     <p className='title'>Cofused what to cook ?</p>
                     <p className='title'>Search with what you have</p>
                 </div>
-                <form>
-
-                </form>
                 <input type='text' placeholder="What's in your Kitchen" onKeyDown={this.onEnter} onChange={this.onChange}/>
                 <i className="fa fa-search" onClick={this.onSearch} />
             </div>
@@ -61,7 +57,7 @@ const mapStateToProps = (state) => ({
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        ...bindActionCreators({query, showLoader, hideLoader}, dispatch)
+        ...bindActionCreators({query}, dispatch)
     }
 }
 

@@ -7,7 +7,7 @@ import Home from "../Home";
 import Menu from "../About";
 import Result from "../Result";
 import Items from "../ItemCards";
-//
+
 class Header extends Component{
     render() {
         return (

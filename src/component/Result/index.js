@@ -9,7 +9,7 @@ class Result extends Component {
     render() {
         let {search} = this.props,  maj_ing;
         let items = search && search.map((item,index) =>{
-            maj_ing = Object.keys(item.keywords).toString();
+            maj_ing = item.keywords.join(', ');
             return <li className='item-container' onClick={() => this.selection(index)}>
                 <div className='image-container'>
                     <img src={item.img} alt='Cousine'/>
@@ -22,14 +22,13 @@ class Result extends Component {
                 </div>
             </li>
         })
-        // console.log('state',state)
         return (
             <div className='result container'>
                 <h2>From your Kitchen</h2>
                 <div>
                     {search && search.length ? <ul className='items'>
                         {items}
-                    </ul> : <p>No Data Found</p>}
+                    </ul> : <p>No Data Found... Go to Home page and try again</p>}
                 </div>
             </div>
         );

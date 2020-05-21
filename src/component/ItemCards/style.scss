@@ -1,5 +1,10 @@
 .item-details {
   padding: 100px 150px 30px 150px;
+  .back-button {
+    margin: 20px 0;
+    font-weight: 600;
+    text-align: left;
+  }
   h2 {
     font-size: 25px;
     font-weight: 800;
@@ -24,6 +29,12 @@
     line-height: 24px;
     li {
       margin: 10px 0;
+      font-family: sans-serif;
     }
+  }
+  .no-data {
+    font-family: sans-serif;
+    font-size: 20px;
+    font-weight: 600;
   }
 }
