@@ -23,7 +23,10 @@ class Search extends Component{
             method: 'GET',
             headers: {
                 'Accept': 'application/json',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET,POST,PUT,PATCH,DELETE,OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type'
             },
             // body: JSON.stringify({search})
         }).then(res => res.json()).then(data => query(data))
